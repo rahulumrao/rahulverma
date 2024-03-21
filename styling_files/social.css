@@ -1,0 +1,20 @@
+.social-icons {
+    float: left;
+    /* Remove float for centering */
+    list-style: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+    width: 40px;
+    /* Adjust width as needed */
+    height: 40px;
+    /* Adjust height as needed */
+    margin-left: 0;
+    /* Remove unnecessary margin-left */
+    padding: 4px;
+    /* Adjust padding if needed */
+    margin: 4px;
+    /* Adjust margin if needed */
+}
