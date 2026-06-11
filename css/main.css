@@ -64,9 +64,56 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse 80% 50% at 15% -10%, var(--accent-soft), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 90% 110%, rgba(94, 234, 212, 0.07), transparent 50%),
+    linear-gradient(var(--bg), var(--bg));
   -webkit-font-smoothing: antialiased;
   transition: background var(--transition), color var(--transition);
+}
+
+html[data-theme="light"] body {
+  background:
+    radial-gradient(ellipse 55% 40% at 100% 0%, rgba(37, 99, 235, 0.05), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 0% 100%, rgba(13, 148, 136, 0.04), transparent 50%),
+    var(--bg);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(61, 158, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 158, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 15%, transparent 75%);
+}
+
+html[data-theme="light"] body::before {
+  display: none;
+}
+
+.ml-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.42;
+}
+
+html[data-theme="light"] .ml-bg {
+  display: none;
+}
+
+main,
+.footer {
+  position: relative;
+  z-index: 1;
 }
 
 main {
@@ -1031,13 +1078,47 @@ ul {
 .footer__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer__links a {
-  font-size: 0.875rem;
-  font-weight: 500;
+.footer__icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
   color: var(--text-muted);
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
 }
 
-.footer__links a:hover { color: var(--text); }
+.footer__icon-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.footer__icon-link svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  fill: currentColor;
+}
+
+.footer__icon-link img {
+  width: 1.125rem;
+  height: 1.125rem;
+  object-fit: contain;
+}
+
+.footer__icon-link--brand {
+  background: transparent;
+}
+
+html[data-theme="dark"] .footer__icon-link--brand img {
+  filter: brightness(0) invert(1);
+  opacity: 0.88;
+}
