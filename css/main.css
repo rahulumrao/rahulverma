@@ -524,6 +524,7 @@ ul {
   margin-inline: auto;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 38%;
   border: 3px solid var(--border);
   box-shadow: var(--shadow);
 }
