@@ -628,6 +628,125 @@ ul {
   max-width: var(--prose-width);
 }
 
+.skills__subtitle {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.skill-projects {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .skill-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-project {
+  padding: 1.25rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.skill-project:hover {
+  border-color: rgba(61, 158, 255, 0.35);
+  box-shadow: var(--shadow);
+}
+
+.skill-project--featured {
+  border-color: rgba(94, 234, 212, 0.35);
+  box-shadow: 0 0 0 1px rgba(94, 234, 212, 0.08), var(--shadow);
+}
+
+.skill-project__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-project__title {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.skill-project__title a {
+  color: var(--text);
+}
+
+.skill-project__title a:hover {
+  color: var(--accent);
+}
+
+.skill-project__langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.skill-project__langs span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+
+.skill-project__desc {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.skill-project__desc code {
+  font-size: 0.8125rem;
+  padding: 0.1rem 0.35rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.skill-project__workflow {
+  margin: 0 0 1rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-family: ui-monospace, monospace;
+}
+
+.skill-project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-project__links a {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid rgba(61, 158, 255, 0.35);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.skill-project__links a:hover {
+  color: #fff;
+  background: var(--accent);
+}
+
 .skills__group {
   padding: 1.5rem;
   background: var(--surface-raised);

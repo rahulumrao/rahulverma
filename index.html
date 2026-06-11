@@ -51,6 +51,7 @@
           <a class="nav__link is-active" href="#about" data-page="about">About</a>
           <a class="nav__link" href="#research" data-page="research">Research</a>
           <a class="nav__link" href="#skills" data-page="skills">Skills</a>
+          <a class="nav__link" href="#ml-tutorials" data-page="ml-tutorials">Tutorials</a>
           <a class="nav__link" href="#achievements" data-page="achievements">Achievements</a>
           <a class="nav__link" href="#conferences" data-page="conferences">Conferences</a>
           <a class="nav__link nav__cta" href="files/Rahul_CV_Ind.pdf" target="_blank" rel="noopener">CV</a>
@@ -379,6 +380,90 @@
           DeePMD/LAMMPS build workflows, and enhanced-sampling analysis codes.
         </p>
 
+        <h3 class="skills__subtitle">Programming highlights</h3>
+        <div class="skill-projects">
+
+          <article class="skill-project">
+            <div class="skill-project__header">
+              <h4 class="skill-project__title">
+                <a href="https://github.com/rahulumrao/sparc" target="_blank" rel="noopener">SPARC</a>
+              </h4>
+              <div class="skill-project__langs">
+                <span>Python</span>
+                <span>ASE</span>
+              </div>
+            </div>
+            <p class="skill-project__desc">
+              Open-source active learning workflow for training reactive machine learning interatomic potentials,
+              published in the <a href="https://joss.theoj.org/papers/10.21105/joss.09468" target="_blank" rel="noopener">Journal of Open Source Software</a>.
+            </p>
+            <div class="skill-project__links">
+              <a href="https://github.com/rahulumrao/sparc" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://docs-sparc.readthedocs.io/en/latest/" target="_blank" rel="noopener">Docs</a>
+            </div>
+          </article>
+
+          <article class="skill-project">
+            <div class="skill-project__header">
+              <h4 class="skill-project__title">
+                <a href="https://github.com/rahulumrao/Reweighing-TASS-1.2" target="_blank" rel="noopener">Reweighing-TASS-1.2</a>
+              </h4>
+              <div class="skill-project__langs">
+                <span>Fortran</span>
+                <span>Bash</span>
+                <span>Python</span>
+              </div>
+            </div>
+            <p class="skill-project__desc">
+              Modular Fortran code I wrote to reweight Temperature Accelerated Sliced Sampling (TASS) output from CPMD/PLUMED runs.
+              Computes multidimensional free energy surfaces via WHAM reweighting or the mean force method, with B-spline interpolation support.
+            </p>
+            <div class="skill-project__links">
+              <a href="https://github.com/rahulumrao/Reweighing-TASS-1.2" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://deepwiki.com/rahulumrao/Reweighing-TASS-1.2" target="_blank" rel="noopener">Docs</a>
+            </div>
+          </article>
+
+          <article class="skill-project">
+            <div class="skill-project__header">
+              <h4 class="skill-project__title">
+                <a href="https://github.com/rahulumrao/FormatTransformer" target="_blank" rel="noopener">FormatTransformer</a>
+              </h4>
+              <div class="skill-project__langs">
+                <span>Python</span>
+              </div>
+            </div>
+            <p class="skill-project__desc">
+              Python package to center molecular structures within periodic boundary conditions and convert XYZ trajectories
+              into VASP (POSCAR) or Quantum ESPRESSO input files via the <code>xyzcenter</code> and <code>xyzconverter</code> CLI tools.
+            </p>
+            <div class="skill-project__links">
+              <a href="https://github.com/rahulumrao/FormatTransformer" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://deepwiki.com/rahulumrao/FormatTransformer" target="_blank" rel="noopener">Docs</a>
+            </div>
+          </article>
+
+          <article class="skill-project">
+            <div class="skill-project__header">
+              <h4 class="skill-project__title">
+                <a href="https://github.com/rahulumrao/Lennard_Jones_MD" target="_blank" rel="noopener">Lennard-Jones MD</a>
+              </h4>
+              <div class="skill-project__langs">
+                <span>Python</span>
+              </div>
+            </div>
+            <p class="skill-project__desc">
+              Installable Python package (<code>LJengo</code>) for Lennard-Jones molecular dynamics with NVE and NVT ensembles,
+              including force calculations, trajectory propagation, and energy plotting utilities.
+            </p>
+            <div class="skill-project__links">
+              <a href="https://github.com/rahulumrao/Lennard_Jones_MD" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://deepwiki.com/rahulumrao/Lennard_Jones_MD/6-glossary" target="_blank" rel="noopener">Docs</a>
+            </div>
+          </article>
+
+        </div>
+
         <div class="skills__groups">
           <div class="skills__group">
             <h3>Methods</h3>
@@ -445,12 +530,98 @@
             <h3>Open Source</h3>
             <div class="skills__tags">
               <span class="tag tag--highlight">SPARC</span>
-              <span class="tag">Reweighting (TASS)</span>
-              <span class="tag">FormatTransformer</span>
+              <span class="tag tag--highlight">Reweighing-TASS</span>
+              <span class="tag tag--highlight">FormatTransformer</span>
               <span class="tag">MD Workflows</span>
               <span class="tag">HPC Build Scripts</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ml-tutorials" class="section section--alt page-panel">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Machine learning interatomic potentials (MLIPs)</h2>
+        </header>
+
+        <div class="skill-projects">
+
+          <article class="skill-project skill-project--featured">
+            <div class="skill-project__header">
+              <h4 class="skill-project__title">
+                <a href="https://github.com/rahulumrao/sparc" target="_blank" rel="noopener">SPARC Tutorial</a>
+              </h4>
+              <div class="skill-project__langs">
+                <span>Jupyter</span>
+                <span>Python</span>
+                <span>ASE</span>
+              </div>
+            </div>
+            <p class="skill-project__desc">
+              Hands-on notebook for the SPARC active learning workflow: building machine learning interatomic potentials
+              for reactive systems with automated sampling, relabeling, and model refinement.
+            </p>
+            <p class="skill-project__workflow">
+              <strong>Workflow:</strong> Active learning loop with ML/MD → query-by-committee → <em>ab initio</em> relabeling → retrain
+            </p>
+            <div class="skill-project__links">
+              <a href="https://colab.research.google.com/github/rahulumrao/sparc/blob/main/examples/SPARC_Tutorial.ipynb" target="_blank" rel="noopener">Colab</a>
+              <a href="https://github.com/rahulumrao/sparc/blob/main/examples/SPARC_Tutorial.ipynb" target="_blank" rel="noopener">Notebook</a>
+              <a href="https://github.com/rahulumrao/sparc" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://docs-sparc.readthedocs.io/en/latest/" target="_blank" rel="noopener">Docs</a>
+            </div>
+          </article>
+
+          <article class="skill-project">
+            <div class="skill-project__header">
+              <h4 class="skill-project__title">
+                <a href="https://github.com/rahulumrao/NequIP-MLP" target="_blank" rel="noopener">NequIP-MLP</a>
+              </h4>
+              <div class="skill-project__langs">
+                <span>Jupyter</span>
+                <span>Python</span>
+                <span>NequIP</span>
+              </div>
+            </div>
+            <p class="skill-project__desc">
+              Tutorial for training a NequIP machine learning potential on a 22-water cluster in a periodic box.
+              Covers data generation with Quantum ESPRESSO, model training, and LAMMPS-based molecular dynamics.
+            </p>
+            <p class="skill-project__workflow">
+              <strong>Workflow:</strong> 00.data → 01.train → 02.lmp
+            </p>
+            <div class="skill-project__links">
+              <a href="https://github.com/rahulumrao/NequIP-MLP" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://github.com/rahulumrao/NequIP-MLP/blob/main/nequip.ipynb" target="_blank" rel="noopener">Notebook</a>
+            </div>
+          </article>
+
+          <article class="skill-project">
+            <div class="skill-project__header">
+              <h4 class="skill-project__title">
+                <a href="https://github.com/rahulumrao/DeePMD-MLP" target="_blank" rel="noopener">DeePMD-MLP</a>
+              </h4>
+              <div class="skill-project__langs">
+                <span>Jupyter</span>
+                <span>Python</span>
+                <span>DeePMD-kit</span>
+              </div>
+            </div>
+            <p class="skill-project__desc">
+              DeepModeling-style tutorial for building a DeePMD potential and exploring the 1,3-butadiene cyclization mechanism.
+              Uses VASP-generated training data, DeePMD-kit training, LAMMPS MD, and PLUMED enhanced sampling.
+            </p>
+            <p class="skill-project__workflow">
+              <strong>Workflow:</strong> 00.data → 01.train → 02.lmp → 03.plumed
+            </p>
+            <div class="skill-project__links">
+              <a href="https://github.com/rahulumrao/DeePMD-MLP" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://github.com/rahulumrao/DeePMD-MLP/blob/main/deepmd_btd.ipynb" target="_blank" rel="noopener">Notebook</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
